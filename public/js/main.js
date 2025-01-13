@@ -16,6 +16,20 @@ let GlassHeight = document.getElementById("GlassHeight")
 
 let Glass = [GlassOne, GlassTwo, GlassThree, GlassFour, GlassFive, GlassSix, GlassSeven, GlassHeight]
 
+function playSound(soundFile) {
+    audioSource.src = soundFile; // Change la source du son
+    audioPlayer.load();           // Recharge l'élément audio avec la nouvelle source
+    audioPlayer.play();           // Joue le son
+}
+
+function handleGlassClick(glassElement, soundPath) {
+    glassElement.addEventListener("click", () => {
+        if (glassElement.classList.contains("selected")) {
+            playSound(soundPath);
+        }
+    });
+}
+
 function GlassSelect(x) {
     let indexGlass = Glass.indexOf(x);
 
@@ -65,9 +79,19 @@ function Drink() {
 }
 
 
+
 Glass.forEach(element => {
     element.addEventListener("click", () =>{
         GlassSelect(element)
         Drink()
     })
 });
+
+handleGlassClick(GlassOne, "./public/sound/premier.mp3");
+handleGlassClick(GlassTwo, "./public/sound/deuxieme.mp3");
+handleGlassClick(GlassThree, "./public/sound/troisieme.mp3");
+handleGlassClick(GlassFour, "./public/sound/1litre.mp3");
+handleGlassClick(GlassFive, "./public/sound/colonnel.mp3");
+handleGlassClick(GlassSix, "./public/sound/dur.mp3");
+handleGlassClick(GlassSeven, "./public/sound/avantDernier.mp3");
+handleGlassClick(GlassHeight, "./public/sound/morte.mp3");
