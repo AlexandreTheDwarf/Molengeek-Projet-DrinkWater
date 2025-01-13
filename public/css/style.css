@@ -1,94 +1,103 @@
-body{
+body {
     width: 100%;
     background-color: #2D89DF;
-    color:  #FEFEFE;
+    color: #FEFEFE;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.container{
+.container {
     height: 350px;
 }
 
-.sectionBottle{
+.sectionBottle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* Forme de la bouteille */
 #Bottle {
-    height: 100%;
-    background-color:  #FEFEFE;
-    color:#1242BF;
-
+    height: 300px;
+    width: 150px;
+    background-color: #FEFEFE;
+    color: #1242BF;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-
     border: solid 3px #1242BF;
-  }
+    position: relative;
+    overflow: hidden;
+    border-radius: 10% 10% 30% 30% / 10% 10% 30% 30% 
+}
 
-#Etiquette{
+/* Etiquette */
+#Etiquette {
     height: 100%;
-    background-color:  #FEFEFE;
-    color:#1242BF;
-
+    background-color: #FEFEFE;
+    color: #1242BF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#Etiquette > h3, p{
+#Etiquette > h3, p {
     padding: 0;
     margin: 0;
 }
-  
+
+/* Eau avec animation fluide */
 #Water {
     height: 0%;
-    width: 100px;
+    width: 100%;
     background-color: #5EA9F5;
     color: #1242BF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s ease-in-out;
+}
 
+/* Section verre */
+.sectionGlass {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.sectionGlass{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.sectionGlass > h3 {
+    text-align: center;
 }
 
-.ButtonContainer{
+.ButtonContainer {
     width: 60%;
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
     grid-gap: 1%;
 }
 
-button{
+button {
     height: 100px;
     border-radius: 10% 10% 10% 10% / 0% 0% 15% 15%;
 }
 
-button:active{
+button:active {
     background-color: #5EA9F5;
     color: white;
 }
 
-.selected{
+.selected {
     background-color: #5EA9F5;
     color: white;
 }
 
-.hidden{
+.hidden {
     width: 0;
     height: 0;
     visibility: hidden; /* Cache visuellement l'élément */
