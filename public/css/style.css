@@ -1,0 +1,96 @@
+body{
+    width: 100%;
+    background-color: #2D89DF;
+    color:  #FEFEFE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    height: 350px;
+}
+
+.sectionBottle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Bottle {
+    height: 100%;
+    background-color:  #FEFEFE;
+    color:#1242BF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    border: solid 3px #1242BF;
+  }
+
+#Etiquette{
+    height: 100%;
+    background-color:  #FEFEFE;
+    color:#1242BF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Etiquette > h3, p{
+    padding: 0;
+    margin: 0;
+}
+  
+#Water {
+    height: 0%;
+    width: 100px;
+    background-color: #5EA9F5;
+    color: #1242BF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionGlass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonContainer{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 1%;
+}
+
+button{
+    height: 100px;
+    border-radius: 10% 10% 10% 10% / 0% 0% 15% 15%;
+}
+
+button:active{
+    background-color: #5EA9F5;
+    color: white;
+}
+
+.selected{
+    background-color: #5EA9F5;
+    color: white;
+}
+
+.hidden{
+    width: 0;
+    height: 0;
+    visibility: hidden; /* Cache visuellement l'élément */
+    position: absolute; /* Le retire du flux visuel, si nécessaire */
+}
